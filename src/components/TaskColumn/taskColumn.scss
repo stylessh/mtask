@@ -1,0 +1,40 @@
+@import "../../styles/variables.scss";
+
+.taskColumn {
+  .header {
+    color: $white;
+    text-align: center;
+    padding: .5em 0;
+
+    margin-bottom: 1em;
+
+    h2 {
+      font-weight: 600;
+    }
+  }
+
+  &.process {
+    .header {
+      background: $process;
+    }
+  }
+  &.todo {
+    .header {
+      background: $todo;
+    }
+  }
+  &.review {
+    .header {
+      background: $review;
+    }
+  }
+  &.done {
+    .header {
+      background: $done;
+    }
+  }
+
+  .tasks-list {
+    min-height: 200px;
+  }
+}

@@ -1,0 +1,35 @@
+@import "../../styles/variables.scss";
+
+.task {
+  width: 100%;
+  margin-bottom: 1em;
+
+  background: $white;
+  box-shadow: 0px 5px 10px rgba(176, 176, 176, 0.25);
+  border-radius: 10px;
+
+  padding: 2em 1.5em;
+
+  cursor: grab;
+
+  h2 {
+    font-weight: 600;
+    color: $black;
+
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    font-size: 1em;
+    color: $dark-gray;
+  }
+
+  &.sortable-ghost {
+    visibility: hidden;
+  }
+
+  &.sortable-chosen {
+    opacity: 1;
+
+  }
+}
