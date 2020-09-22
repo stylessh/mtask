@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { FC } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-function App() {
+// screens
+import Home from "./screens/Home";
+import Login from "./screens/Login";
+import Register from "./screens/Register";
+import Dashboard from "./screens/Dashboard";
+
+// components
+import Navbar from "./components/Navbar";
+
+const App: FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <Router>
+      <header className="header">
+        <Navbar />
       </header>
-    </div>
+
+      <main className="container">
+        <Switch>
+          <Route path="/" exact render={() => <Home />} />
+
+          <Route path="/login" exact render={() => <Login />} />
+          <Route path="/register" exact render={() => <Register />} />
+
+          <Route path="/dashboard" exact render={() => <Dashboard />} />
+        </Switch>
+      </main>
+    </Router>
   );
 }
 
