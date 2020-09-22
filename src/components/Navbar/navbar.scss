@@ -1,0 +1,42 @@
+@import "../../styles/variables.scss";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .brand {
+    a {
+      font-weight: 400;
+      color: $black;
+    }
+  }
+
+  .links {
+    li {
+      display: inline-block;
+      margin: 0 1em;
+    }
+
+    a {
+      font-weight: 400;
+      color: $black;
+    }
+  }
+}

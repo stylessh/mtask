@@ -1,0 +1,38 @@
+@import "../../styles/variables.scss";
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .form {
+    width: 300px;
+    text-align: center;
+
+    .form-header {
+      h1 {
+        font-size: 3em;
+        color: $black;
+      }
+    }
+
+    .form-body {
+      input {
+        margin: 1.5em 0;
+      }
+    }
+
+    .form-footer {
+      display: flex;
+      justify-content: space-between;
+
+      margin: 1em 0;
+      font-weight: 600;
+
+      a {
+        color: $process;
+      }
+    }
+  }
+}

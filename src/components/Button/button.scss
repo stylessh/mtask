@@ -1,0 +1,45 @@
+@import "../../styles/variables.scss";
+
+button {
+  display: block;
+  width: 100%;
+  padding: 1.5em;
+
+  border: none;
+  color: $black;
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease-in-out;
+
+  &.process {
+    background: $process;
+  }
+  &.todo {
+    background: $todo;
+  }
+  &.review {
+    background: $review;
+  }
+  &.done {
+    background: $done;
+  }
+
+  &:hover {
+    &.process {
+      background: lighten($color: $process, $amount: 5);
+    }
+    &.todo {
+      background: lighten($color: $todo, $amount: 5);
+    }
+    &.review {
+      background: lighten($color: $review, $amount: 5);
+    }
+    &.done {
+      background: lighten($color: $done, $amount: 5);
+    }
+  }
+}
