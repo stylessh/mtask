@@ -1,11 +1,7 @@
 import React, { FC } from "react";
-import { ITask } from "../../interface/Task";
-
+import { TaskProps } from "../../types";
 import "./task.scss";
 
-type TaskProps = {
-  task: ITask;
-};
 
 const Task: FC<TaskProps> = ({ task }) => {
   return (

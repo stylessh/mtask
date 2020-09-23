@@ -11,7 +11,6 @@ import Dashboard from "./screens/Dashboard";
 import Navbar from "./components/Navbar";
 
 const App: FC = () => {
-
   return (
     <Router>
       <header className="header">

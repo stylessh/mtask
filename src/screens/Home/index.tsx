@@ -1,5 +1,5 @@
 import React, { FC, useState, useEffect } from "react";
-import Loading from "react-loading";
+import Loading from "../../components/Loading";
 
 import "./home.scss";
 
@@ -13,13 +13,7 @@ const Home: FC = () => {
   return (
     <section className="home">
       {loading ? (
-        <Loading
-          type="cylon"
-          color="green"
-          width={64}
-          height={64}
-          className="spinner"
-        />
+        <Loading />
       ) : (
         <div className="info">
           <h1>Task managment app.</h1>

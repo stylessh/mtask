@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, FC } from "react";
 import { groupBy } from "lodash";
-import Loading from "react-loading";
+import Loading from "../../components/Loading";
 
 import TaskColumn from "../../components/TaskColumn";
 import data from "../../data";
 
 import "./dashboard.scss";
 
-const Dashboard = () => {
+const Dashboard: FC = () => {
   let columns = groupBy(data, (d) => d.status);
   const [loading, setLoading] = useState(true);
 
@@ -18,13 +18,7 @@ const Dashboard = () => {
   return (
     <section className="dashboard">
       {loading ? (
-        <Loading
-          type="cylon"
-          color="green"
-          width={64}
-          height={64}
-          className="spinner"
-        />
+        <Loading />
       ) : (
         <div className="tasks-container">
           <TaskColumn title="To Do" data={columns.todo} className="todo" />

@@ -1,16 +1,11 @@
 import React, { FC, useState, useEffect } from "react";
 import { ReactSortable } from "react-sortablejs";
-import { ITask } from "../../interface/Task";
+import { TaskColumnProps } from "../../types";
+import { ITask } from "../../interfaces";
 
 import Task from "../Task";
 
 import "./taskColumn.scss";
-
-type TaskColumnProps = {
-  title: string;
-  className?: string;
-  data: ITask[];
-};
 
 const TaskColumn: FC<TaskColumnProps> = ({ data, title, className }) => {
   const [tasks, setTasks] = useState<ITask[]>([]);

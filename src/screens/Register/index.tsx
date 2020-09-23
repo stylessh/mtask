@@ -2,9 +2,9 @@ import React, { FC, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
+import Loading from "../../components/Loading";
 
 import "./register.scss";
-import Loading from "react-loading";
 
 const Register: FC = () => {
   const [loading, setLoading] = useState(true);
@@ -16,13 +16,7 @@ const Register: FC = () => {
   return (
     <section className="register">
       {loading ? (
-        <Loading
-          type="cylon"
-          color="green"
-          width={64}
-          height={64}
-          className="spinner"
-        />
+        <Loading />
       ) : (
         <form className="form">
           <div className="form-header">

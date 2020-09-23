@@ -1,10 +1,29 @@
+@import "../../styles/variables.scss";
+
 .dashboard {
   .tasks-container {
     margin-top: 6em;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 2em;
+  }
+}
 
-    // overflow-x: scroll;
+@media screen and (max-width: $md) {
+  .dashboard {
+    font-size: 16px;
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .tasks-container {
+      min-height: 70vh;
+      margin-top: 0;
+      grid-template-columns: repeat(4, minmax(80vw, 1fr));
+
+      overflow-x: scroll;
+    }
   }
 }

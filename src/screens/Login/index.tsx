@@ -4,7 +4,7 @@ import Input from "../../components/Input";
 import Button from "../../components/Button";
 
 import "./login.scss";
-import Loading from "react-loading";
+import Loading from "../../components/Loading";
 
 const Login: FC = () => {
   const [loading, setLoading] = useState(true);
@@ -16,13 +16,7 @@ const Login: FC = () => {
   return (
     <section className="login">
       {loading ? (
-        <Loading
-          type="cylon"
-          color="green"
-          width={64}
-          height={64}
-          className="spinner"
-        />
+        <Loading />
       ) : (
         <form className="form">
           <div className="form-header">
